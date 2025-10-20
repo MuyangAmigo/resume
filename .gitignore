@@ -1,0 +1,15 @@
+# Ignore everything by default
+*
+
+# Except .tex and .pdf files
+!*.tex
+!*.pdf
+
+# Also allow directories to be traversed
+!*/
+
+# Except specific files we want to keep
+!.gitignore
+!README.md
+!LICENSE
+!Makefile

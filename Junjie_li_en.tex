@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in Latex
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\labelitemi}{}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1: }{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeCustomSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Junjie Li}} & Email: {junjieli0909@foxmail.com}\\
+  & Mobile: +86 156-5103-9915 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education Background}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Northwestern University}{Evanston, IL}
+      {M.S. in Computer Science;  GPA: 3.86 / 4.00}{Sep. 2015 -- Dec. 2016}
+    \resumeSubheading
+      {Nanjing University of Posts and Telecommunications}{Nanjing, China}
+      {B.E. in Communication Engineering;  GPA: 3.84 / 5.00}{Aug. 2011 -- May. 2015}
+    \resumeCustomSubheading {Academic Highlights} {} 
+       \resumeItemListStart
+        \resumeItem{IEEE Journal Publication} {Personal Access Control System Using Moving Object Detection and Face Recognition}
+        \resumeItem{Obtained Dual Degree} {New York Institute of Technology, B.S. in Electrical and Electronics with GPA: 3.56 / 4.00}
+       \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+     % Microsoft Experience
+         \resumeSubheading
+      {Microsoft. {Cloud and AI, Developer Division}}{Shanghai, CN}
+      {Product Manager}{September 2020 - Now}
+      \resumeItemListStart
+        \resumeItem{General Summary} {Focus on driving developer tool chains for building applications on Microsoft 365 (Office) developer platforms including Teams, Outlook and Office.com}{}
+          \resumeItemListStart
+            \item {Improving Teams Toolkit (A Visual Studio Code Extension) end to end development experience such as native Azure integration.}
+            \item {Lead product design on Command Line tooling to support keyboard-centric experience from ground up.}
+            \item {Delivering SDKs to delight developers on simplifying authentications.}
+          \resumeItemListEnd
+          
+      \resumeItemListEnd
+     % Trip Experience
+         \resumeSubheading
+      {Trip.com Group. {Flight Business Unit}}{Shanghai, CN}
+      {Product Manager}{August 2018 - September 2020}
+      \resumeItemListStart
+        \resumeItem{General Summary} {Focus driving product development, feature enhancement and integration with various GDS connections and external partners.}
+        \resumeItem{Product lines responsible for and key results}{}
+          \resumeItemListStart
+            \item {Enhance structured fare condition processing and automated ticket refund/exchange features: Optimized customers' booking experience and reduced operation cost for providing post booking services.}
+            \item {Integrate with GDS ancillary service platform: Enrich Trip's after sales functionalities and complete Trip's overall servicing capability as an one-step booking platform.}
+            \item {Lead product design of partner portal: a portal for Trip's supplier to manage their air content inventory and access visualized industry data.}
+          \resumeItemListEnd
+          
+        \resumeItem{Day-to-day duties}{}
+          \resumeItemListStart
+            \item {Requirement Analysis: Analyze existing feature enhancements and new feature requirements from business to operation teams.}
+            \item {Product Design: Design product logic and draft function specifications, produce integration workflow with detailed external API research.}
+            \item {Project Management: Drive agile development process with engineering team, ensure product delivery and feature iterations in road map.}
+            \item {Daily Supervision: Validate product functionalities and API interactions after feature release, monitor key technical and business metrics on daily basis.}
+            \item {Team Collaboration: serve as point of contact, ensure communication and collaboration in often cross-company teams.}
+          \resumeItemListEnd
+      \resumeItemListEnd
+    
+    % Apple Experience 
+    \resumeSubheading
+      {Apple, Inc. {Online Store Engineering}}{Sunnyvale, US}
+      {Software Development Engineer}{June 2017 - June 2018}
+        \resumeItemListStart
+        \resumeItem{General Summary} {Part of Checkout Redesign Project to build scalable web services on Apple Online Store to enable global consumers with a smooth and effortless checkout experience.}
+          \resumeItemListStart
+            \item {Feature developed under Agile mythology using Scala, build UT with Mockito and Power Mock.}
+            \item {Refactoring existing Code to apply multiple design pattern like delegate, factory; Ensure thread safety and support high concurrency.}
+            \item {Performance Tuning using AspectJ and minimize API/Wire counts to mitigate downstream service pressures.}
+            \item {Using Jenkins and InfraRed for build automation, CI/CD.}
+        \resumeItemListEnd
+      \resumeItemListEnd
+      
+\resumeSubHeadingListEnd
+
+  
+ 
+
+% --------Technical SKILLS------------
+\section{Programming Skills, languages and Other Skills}
+\resumeSubHeadingListStart
+    \resumeCustomSubheading{Programming Languages: JAVA, Scala, JavaScript, HTML/CSS, SQL} {}
+    \resumeCustomSubheading{Software Skills: MySQL, MATLAB; Latex, Markdown; MS Office} {}
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
