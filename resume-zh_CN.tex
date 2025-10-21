@@ -1,85 +1,173 @@
-% !TEX TS-program = xelatex
-% !TEX encoding = UTF-8 Unicode
-% !Mode:: "TeX:UTF-8"
+%-------------------------
+% Resume in Latex (Chinese Version)
+% License : MIT
+%------------------------
 
-\documentclass{resume}
-\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
-\usepackage{linespacing_fix} % disable extra space before next section
-\usepackage{cite}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[UTF8]{ctex} % Chinese support
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\labelitemi}{}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1: }{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeCustomSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
 
-\name{李俊杰}
-
-% {E-mail}{mobilephone}{homepage}
-% be careful of _ in emaill address
-\contactInfo{junjieli0909@foxmail.com}{(+86) 156-5103-9915}{}
-% {https://github.com/MuyangAmigo}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE 李俊杰}} & Email: {junjieli0909@foxmail.com}\\
+  \textbf{高级产品经理 | 软件工程师} & Mobile: +86 156-5103-9915 \\
+  GitHub: github.com/MuyangAmigo & LinkedIn: linkedin.com/in/junjie-li \\
+\end{tabular*}
 % {E-mail}{mobilephone}
 % keep the last empty braces!
 %\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
  
+%-----------EDUCATION-----------------
 \section{教育背景}
-\datedsubsection{\textbf{西北大学}, 美国}{GPA: 3.86/4,    2015 -- 2016}
-\textit{硕士}\ 计算机科学
-\datedsubsection{\textbf{南京邮电大学}, 南京}{GPA: 3.84/5,    2011 -- 2015}
-\textit{学士}\ 通信工程\\
-\textbf{学术情况:}\ 
-\begin{itemize}
-  \item 发表IEEE学术核心期刊论文: Personal Access Control System Using Moving Object Detection and Face Recognition
-  \item 获得纽约理工大学(NYIT)双学位
-\end{itemize}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {西北大学}{伊利诺伊州埃文斯顿}
+      {计算机科学硕士学位;  GPA: 3.86/4.00}{2015年9月 -- 2016年12月}
+    \resumeSubheading
+      {南京邮电大学}{南京}
+      {通信工程学士学位;  GPA: 3.84/5.00}{2011年8月 -- 2015年5月}
+    \resumeSubheading
+      {纽约理工大学}{纽约}
+      {电气与电子工程学士学位;  GPA: 3.56/4.00}{双学位项目}
+    \resumeCustomSubheading {学术成就} {} 
+       \resumeItemListStart
+        \resumeItem{研究发表} {IEEE期刊论文："基于运动目标检测和人脸识别的个人访问控制系统"}
+       \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
+%-----------EXPERIENCE-----------------
 \section{工作经历}
-% 微软经历
-\datedsubsection{\textbf{微软, 开发者事业部} 上海
-}{2020年9月 -- 至今}
-\role{产品经理}{}
-\begin{itemize}
-\item {负责Teams小程序开发工具系列产品, 包括VS Code插件, 命令行工具以及SDK}
-    \begin{itemize}
-        \item Visual Studio Code插件: 负责与Azure资源相关的集成.
-        \item CLI: 负责CLI产品设计工作.
-        \item SDK: 集成鉴权, 单点登录API.
-    \end{itemize}
+\resumeSubHeadingListStart
+     % 微软经历 - 现任职位
+         \resumeSubheading
+      {微软公司}{上海}
+      {高级产品经理 - CoreAI}{2024年3月 -- 至今}
+      \resumeItemListStart
+        \resumeItem{产品领导力} {负责AI Toolkit产品设计和战略，为开发者构建AI应用提供流畅的工作流程}
+        \resumeItem{关键成就}{}
+          \resumeItemListStart
+            \item {交付AI Toolkit智能体构建器功能，使开发者能够通过零代码配置创建智能代理}
+            \item {推动用户增长，6个月内月活跃用户(MAU)从1.5万增长到6万（增长300\%）}
+            \item {负责从概念到市场发布的端到端产品设计，确立AI Toolkit作为领先开发者工具的地位}
+            \item {与AI研究团队和工程团队协作，将前沿AI能力转化为开发者友好的体验}
+          \resumeItemListEnd
+          
+      \resumeItemListEnd
+      
+     % 微软经历 - 前任职位
+         \resumeSubheading
+      {微软公司}{上海}
+      {产品经理 - 云与AI开发者事业部}{2020年9月 -- 2024年3月}
+      \resumeItemListStart
+        \resumeItem{产品战略} {推动Microsoft 365平台（Teams、Outlook、Office.com）开发者工具链战略，服务超过3亿月活跃开发者}
+        \resumeItem{关键成就}{}
+          \resumeItemListStart
+            \item {增强Teams工具包（VS Code扩展）的原生Azure集成，减少开发者设置时间60\%}
+            \item {主导命令行界面工具的端到端产品设计，提升开发者生产力和采用率40\%}
+            \item {交付身份验证SDK，简化开发者入门流程，缩短集成时间25\%}
+            \item {与跨3个时区的跨职能团队协作，交付影响全球数百万开发者的功能特性}
+          \resumeItemListEnd
+          
+      \resumeItemListEnd
+     % 携程经历
+         \resumeSubheading
+      {携程集团}{上海}
+      {产品经理 - 机票事业部}{2018年8月 -- 2020年9月}
+      \resumeItemListStart
+        \resumeItem{产品影响} {负责服务超过4亿年度用户的机票预订平台产品开发}
+        \resumeItem{关键成就}{}
+          \resumeItemListStart
+            \item {优化自动化退改签系统，处理时间缩短50\%，运营成本降低30\%}
+            \item {整合GDS增值服务平台，收入增长15\%并扩展服务产品线}
+            \item {发布供应商合作伙伴平台，为200+航空公司合作伙伴提供实时库存管理}
+          \resumeItemListEnd
+      \resumeItemListEnd
 
-\end{itemize}
-% 携程经历
-\datedsubsection{\textbf{携程, 机票BU} 上海
-}{2018年8月 -- 2020年9月}
-\role{产品经理}{}
-\begin{itemize}
-\item {作为国际机票后台产品经理，负责的产线以及关键结果：}
-    \begin{itemize}
-        \item 负责迭代国际机票格式化退改条件的解析、退票改签后台操作的自动化功能：提升格式化解析率和自动化程度，优化用户订票体验以及降低售后运营成本。
-        \item 接入全球机票分销系统的增值服务平台：丰富机票订后功能，完善平台服务能力。
-        \item 主导合作伙伴平台的功能设计：中台化的资源管理和行业大数据可视化共享平台。
-    \end{itemize}
-\item {日常职责：}
-    \begin{itemize}
-        \item 需求分析：对内挖掘需求迭代已有产线；对外分析梳理其它部门的原始需求。
-        \item 产品设计：设计内部功能与外部服务的对接方案：结合携程产品功能的设计以及外部接口功能的调研，产出完整的内外交互流程和落地方案。
-        \item 项目管理：参与各研发团队的敏捷开发过程，确保产品功能如期交付以及后续迭代更新；
-        \item 日常监控：验收产品功能、接口交互并日常进行关键技术和业务指标、生产数据的监控；
-        \item 团队合作：作为联络人，确保集团内外充分沟通、高效协作。
-    \end{itemize}
-
-\end{itemize}
-
-% Apple经历
-\datedsubsection{\textbf{Apple, Online Store Engineering} Sunnyvale, CA
-}{2017年6月 -- 2018年6月}
-\role{软件开发工程师}{}
-\begin{itemize}
-    \item {完整参与Checkout Redeisgn项目的生命周期: 需求分析, 功能设计, 敏捷项目管理, 上线迭代等}
-    \item
-    {将原有的使用 Web Object框架开发的平台迁移到组内自行开发的模块化 MVC 框架 (Orbit), 使用 Scala 语言重构已有的各项业务逻辑}
-    % \item {在程序的编写过程中，大量使用配置化思路来建立全球通用的模块，以便快速的进行本地化}
-    \item {涉及技术: Mockito/PowerMock/Jenkins/InfraRed/AspectJ}
-\end{itemize}
+    % Apple经历
+    \resumeSubheading
+      {苹果公司}{加利福尼亚州森尼韦尔}
+      {软件开发工程师 - 在线商店工程部}{2017年6月 -- 2018年6月}
+        \resumeItemListStart
+        \resumeItem{项目影响} {参与苹果在线商店结账重设计项目，服务全球数百万客户}
+        \resumeItem{主要贡献} {使用Scala开发可扩展Web服务，优化系统性能减少API调用40\%，实现CI/CD自动化部署流水线}
+      \resumeItemListEnd
+      
+\resumeSubHeadingListEnd
 
 % %实习经历
 % \datedsubsection{\textbf{Northwestern Univeristy, The Habits Lab} Chicago, IL
@@ -97,14 +185,19 @@
 %  \item main contribution
 %\end{itemize}
 
-\section{IT 技能, 语言及其他证书}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: JAVA, Scala, JavaScript, HTML/CSS, SQL
-  \item 软件技能: MySQL, MATLAB; Latex, Markdown; MS Office
-  \item 精通英语: 海外学习及工作经历(雅思 7.5 / 大学英语六级 587), 通过中级口译、高级口译（笔试）
-%   \item 证书：计算机二级
-\end{itemize}
+% --------Technical SKILLS------------
+\section{技术技能与核心竞争力}
+\resumeSubHeadingListStart
+    \resumeCustomSubheading{编程语言：Java, Scala, JavaScript, TypeScript, Python, HTML/CSS, SQL} {}
+    \resumeCustomSubheading{技术工具：Azure, VS Code扩展, REST APIs, Git, Jenkins, MySQL, Node.js} {}
+    \resumeCustomSubheading{产品管理：敏捷/Scrum, 路线图规划, 利益相关者管理, 数据分析} {}
+    \resumeCustomSubheading{设计与沟通：Figma原型设计, 故事叙述, 演示视频制作, 用户体验设计} {}
+    \resumeCustomSubheading{平台系统：Microsoft 365, Teams, GDS集成, 电子商务, 开发者工具} {}
+    \resumeCustomSubheading{语言能力：精通英语（雅思 7.5 / 大学英语六级 587），中级口译、高级口译（笔试）} {}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
 
 
 %% Reference
